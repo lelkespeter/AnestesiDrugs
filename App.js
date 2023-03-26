@@ -3,6 +3,8 @@ import {StatusBar} from "expo-status-bar";
 import {StyleSheet, Text, View} from "react-native";
 import {useFonts} from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
+import {FontAwesome5} from "@expo/vector-icons";
+
 import {NavigationContainer} from "@react-navigation/native";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
@@ -43,8 +45,36 @@ export default function App() {
           tabBarActiveTintColor: GlobalStyles.colors.neon,
         }}
       >
-        <BottomTabs.Screen name="CurrentDrugs" component={CurrentDosesScreen} />
-        <BottomTabs.Screen name="DrugsList" component={DrugsListScreen} />
+        <BottomTabs.Screen
+          name="CurrentDrugs"
+          component={CurrentDosesScreen}
+          options={{
+            title: "Dos/kg",
+            tabBarLabel: "Doser",
+            tabBarIcon: ({color, size}) => (
+              <FontAwesome5
+                name="hand-holding-medical"
+                size={size}
+                color={color}
+              />
+            ),
+          }}
+        />
+        <BottomTabs.Screen
+          name="DrugsList"
+          component={DrugsListScreen}
+          options={{
+            title: "List of drugs",
+            tabBarLabel: "List",
+            tabBarIcon: ({color, size}) => (
+              <FontAwesome5
+                name="briefcase-medical"
+                size={size}
+                color={color}
+              />
+            ),
+          }}
+        />
       </BottomTabs.Navigator>
     );
   }
