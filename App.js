@@ -7,7 +7,7 @@ import StartScreen from "./screens/StartScreen";
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Doskalkylator</Text>
+      <Text>Doser</Text>
       <StatusBar style="auto" />
       <StartScreen />
       <CurrentDosesScreen />
