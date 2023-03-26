@@ -3,6 +3,10 @@ import {StatusBar} from "expo-status-bar";
 import {StyleSheet, Text, View} from "react-native";
 import {useFonts} from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
+import {NavigationContainer} from "@react-navigation/native";
+import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
+import {createNativeStackNavigator} from "@react-navigation/native-stack";
+import {GlobalStyles} from "./constants/styles";
 
 import CurrentDosesScreen from "./screens/CurrentDosesScreen";
 import DrugsListScreen from "./screens/DrugsListScreen";
@@ -26,12 +30,39 @@ export default function App() {
     return null;
   }
 
+  const BottomTabs = createBottomTabNavigator();
+  const Stack = createNativeStackNavigator();
+
+  function DrugsOverview() {
+    return (
+      <BottomTabs.Navigator
+        screenOptions={{
+          headerStyle: {backgroundColor: GlobalStyles.colors.primary700},
+          headerTintColor: "white",
+          tabBarStyle: {backgroundColor: GlobalStyles.colors.primary700},
+          tabBarActiveTintColor: GlobalStyles.colors.neon,
+        }}
+      >
+        <BottomTabs.Screen name="CurrentDrugs" component={CurrentDosesScreen} />
+        <BottomTabs.Screen name="DrugsList" component={DrugsListScreen} />
+      </BottomTabs.Navigator>
+    );
+  }
+
   return (
-    <View style={styles.container} onLayout={onLayoutRootView}>
-      <Text style={{fontFamily: "roboto-bold", fontSize: 30}}>Roboto Bold</Text>
-      <Text style={{fontSize: 30}}>Platform Default</Text>
-      <Text style={{fontFamily: "roboto-font", fontSize: 30}}>Roboto</Text>
-    </View>
+    <>
+      <StatusBar style="light" />
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="DrogsOverview"
+            component={DrugsOverview}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen name="Start" component={StartScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </>
   );
 }
 
