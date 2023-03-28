@@ -1,12 +1,10 @@
 import {StyleSheet, Text, View} from "react-native";
 import React from "react";
 
+import ListAllMediciner from "../components/ListAllMediciner";
+import {LM} from "../constants/data";
 const DrugsListScreen = () => {
-  return (
-    <View>
-      <Text>List of drugs we use</Text>
-    </View>
-  );
+  return <ListAllMediciner drugs={LM} />;
 };
 
 export default DrugsListScreen;
