@@ -1,12 +1,17 @@
 import {StyleSheet, Text, View} from "react-native";
 import React from "react";
 
+import {appStyles} from "../constants/myStyles";
+
 import ListAllMediciner from "../components/ListAllMediciner";
-import {LM} from "../constants/data";
+import LM from "../constants/data";
+
 const DrugsListScreen = () => {
-  return <ListAllMediciner drugs={LM} />;
+  return (
+    <View style={appStyles.container}>
+      <ListAllMediciner drugs={LM} />
+    </View>
+  );
 };
 
 export default DrugsListScreen;
-
-const styles = StyleSheet.create({});

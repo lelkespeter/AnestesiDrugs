@@ -8,11 +8,12 @@ import {FontAwesome5} from "@expo/vector-icons";
 import {NavigationContainer} from "@react-navigation/native";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
-import {GlobalStyles} from "./constants/styles";
+import {GlobalStyles} from "./constants/appColors";
 
 import CurrentDosesScreen from "./screens/CurrentDosesScreen";
 import DrugsListScreen from "./screens/DrugsListScreen";
 import StartScreen from "./screens/StartScreen";
+import IconButton from "./UI/IconButton";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -38,12 +39,22 @@ export default function App() {
   function DrugsOverview() {
     return (
       <BottomTabs.Navigator
-        screenOptions={{
-          headerStyle: {backgroundColor: GlobalStyles.colors.primary700},
+        screenOptions={({navigation}) => ({
+          headerStyle: {backgroundColor: GlobalStyles.colors.primary800},
           headerTintColor: "white",
-          tabBarStyle: {backgroundColor: GlobalStyles.colors.primary700},
+          tabBarStyle: {backgroundColor: GlobalStyles.colors.primary800},
           tabBarActiveTintColor: GlobalStyles.colors.neon,
-        }}
+          headerRight: ({tintColor}) => (
+            <IconButton
+              icon="accessibility-new"
+              size={24}
+              color={tintColor}
+              onPress={() => {
+                navigation.navigate("Start");
+              }}
+            />
+          ),
+        })}
       >
         <BottomTabs.Screen
           name="CurrentDrugs"
@@ -60,6 +71,7 @@ export default function App() {
             ),
           }}
         />
+
         <BottomTabs.Screen
           name="DrugsList"
           component={DrugsListScreen}

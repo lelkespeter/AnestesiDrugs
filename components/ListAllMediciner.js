@@ -1,16 +1,21 @@
 import {FlatList, StyleSheet, Text, View} from "react-native";
 import React from "react";
 
-function renderDrugsItem({itemData}) {
-  return (
-    <View style={styles.container}>
-      <Text>{itemData.item.name}</Text>
-      <Text>{itemData.item.styrka}</Text>
-    </View>
-  );
-}
+import {appStyles} from "../constants/myStyles";
 
 const ListAllMediciner = ({drugs}) => {
+  function renderDrugsItem({item}) {
+    return (
+      <View style={appStyles.ListContainer}>
+        <View style={appStyles.itemContainer}>
+          <Text style={appStyles.textNamn}>{item.name}</Text>
+          <View style={appStyles.styrka}>
+            <Text style={appStyles.text}>{item.styrka}</Text>
+          </View>
+        </View>
+      </View>
+    );
+  }
   return (
     <FlatList
       data={drugs}
@@ -21,10 +26,3 @@ const ListAllMediciner = ({drugs}) => {
 };
 
 export default ListAllMediciner;
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: "row",
-    paddingRight: 7,
-  },
-});

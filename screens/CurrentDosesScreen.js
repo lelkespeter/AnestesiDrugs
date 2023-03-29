@@ -4,7 +4,7 @@ import React from "react";
 const CurrentDosesScreen = () => {
   return (
     <View>
-      <Text>Current Doses</Text>
+      <Text style={{fontFamily: "open-sans-bold"}}>Current Doses</Text>
     </View>
   );
 };
