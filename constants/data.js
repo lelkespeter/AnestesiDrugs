@@ -13,8 +13,8 @@ const LM = [
     name: "Ondansetron",
     styrka: "2 mg/ml",
     recept: "",
-    dosiMg: 0.1,
-    dosImikroG: "",
+    dosimG: 0.1,
+    dosIµG: "",
     obs: "maximalt 4 mg",
   },
   {
@@ -22,8 +22,8 @@ const LM = [
     name: "Betapred",
     styrka: "4 mg/ml",
     recept: "",
-    dosiMg: 0.2,
-    dosImikroG: "",
+    dosimG: 0.2,
+    dosIµG: "",
     obs: "maximalt 4 mg",
   },
   {
@@ -31,8 +31,8 @@ const LM = [
     name: "Phenergan",
     styrka: "25 mg/ml",
     recept: "",
-    dosiMg: 0.5,
-    dosImikroG: "",
+    dosimG: 0.5,
+    dosIµG: "",
     obs: "maximalt 12,5 mg",
   },
   {
@@ -41,7 +41,7 @@ const LM = [
     styrka: "2 mg/ml",
     recept: "",
     dosiMg: 0.1,
-    dosImikroG: "",
+    dosIµG: "",
     obs: "maximalt 4 mg",
   },
   {
@@ -50,7 +50,7 @@ const LM = [
     styrka: "0.5 mg/ml",
     recept: "",
     dosiMg: "",
-    dosImikroG: 10,
+    dosIµG: 10,
     obs: "maximalt 0.5 mg",
   },
 ];

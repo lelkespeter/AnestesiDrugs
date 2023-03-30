@@ -1,10 +1,12 @@
 import {StyleSheet, Text, View} from "react-native";
 import React from "react";
+import AktuellaMedicinerList from "../components/AktuellaMedicinerList";
+import LM from "../constants/data";
 
 const CurrentDosesScreen = () => {
   return (
     <View>
-      <Text style={{fontFamily: "open-sans-bold"}}>Current Doses</Text>
+      <AktuellaMedicinerList drugs={LM} />
     </View>
   );
 };

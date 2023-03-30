@@ -19,7 +19,7 @@ export default function App() {
   const [fontsLoaded] = useFonts({
     "open-sans": require("./assets/fonts/OpenSans-Regular.ttf"),
     "open-sans-bold": require("./assets/fonts/OpenSans-Bold.ttf"),
-    "roboto-font": require("./assets/fonts/Roboto-Regular.ttf"),
+    "robot-o": require("./assets/fonts/Roboto-Regular.ttf"),
     "roboto-bold": require("./assets/fonts/Roboto-Bold.ttf"),
   });
 
