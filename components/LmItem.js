@@ -10,9 +10,11 @@ const LmItem = ({id, name, styrka, recept, dosimG, dosIµG, obs}) => {
         {styrka && styrka.length > 0 ? <Text>{styrka}</Text> : null}
         {recept && recept.length > 0 ? <Text>spädning: {recept}</Text> : null}
 
-        {dosimG != null && dosimG !== "" ? <Text>{dosimG * w} mg</Text> : null}
+        {dosimG != null && dosimG !== "" ? (
+          <Text>{(dosimG * w).toFixed(2)} mg</Text>
+        ) : null}
         {dosIµG != null && dosIµG !== "" ? (
-          <Text>{dosIµG * w} mikrog</Text>
+          <Text>{(dosIµG * w).toFixed(2)} mikrog</Text>
         ) : null}
 
         {obs && obs.length > 0 ? <Text>{obs}</Text> : null}
