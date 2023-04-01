@@ -4,7 +4,7 @@ import React from "react";
 const StartScreen = () => {
   return (
     <View style={{marginVertical: 22}}>
-      <Text>Start Screen</Text>
+      <Text>Ange vikten</Text>
     </View>
   );
 };

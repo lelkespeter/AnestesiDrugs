@@ -60,7 +60,7 @@ export default function App() {
           name="CurrentDrugs"
           component={CurrentDosesScreen}
           options={{
-            title: "Dos/kg",
+            title: "Ge doser av läkemedlen",
             tabBarLabel: "Doser",
             tabBarIcon: ({color, size}) => (
               <FontAwesome5

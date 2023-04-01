@@ -35,15 +35,7 @@ const LM = [
     dosIµG: "",
     obs: "maximalt 12,5 mg",
   },
-  {
-    id: "l5",
-    name: "Ondansetron",
-    styrka: "2 mg/ml",
-    recept: "",
-    dosiMg: 0.1,
-    dosIµG: "",
-    obs: "maximalt 4 mg",
-  },
+ 
   {
     id: "l6",
     name: "Atropin inj.",
