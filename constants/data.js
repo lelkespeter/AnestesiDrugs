@@ -1,7 +1,7 @@
 const LM = [
   {
     id: "l1",
-    name: "Klonidin",
+    drugName: "Klonidin",
     styrka: "15 µg/ml",
     recept: "1 ml catapressan 150 µg/ml + 9 ml NaCl",
     dosimG: "",
@@ -10,7 +10,7 @@ const LM = [
   },
   {
     id: "l2",
-    name: "Ondansetron",
+    drugName: "Ondansetron",
     styrka: "2 mg/ml",
     recept: "",
     dosimG: 0.1,
@@ -19,7 +19,7 @@ const LM = [
   },
   {
     id: "l3",
-    name: "Betapred",
+    drugName: "Betapred",
     styrka: "4 mg/ml",
     recept: "",
     dosimG: 0.2,
@@ -28,17 +28,17 @@ const LM = [
   },
   {
     id: "l4",
-    name: "Phenergan",
+    drugName: "Phenergan",
     styrka: "25 mg/ml",
     recept: "",
     dosimG: 0.5,
     dosIµG: "",
     obs: "maximalt 12,5 mg",
   },
- 
+
   {
     id: "l6",
-    name: "Atropin inj.",
+    drugName: "Atropin inj.",
     styrka: "0.5 mg/ml",
     recept: "",
     dosiMg: "",
