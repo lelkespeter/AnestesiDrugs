@@ -38,7 +38,7 @@ const LM = [
 
   {
     id: "l6",
-    drugName: "Atropin inj.",
+    drugName: "Atropin",
     styrka: "0.5 mg/ml",
     recept: "",
     dosiMg: "",

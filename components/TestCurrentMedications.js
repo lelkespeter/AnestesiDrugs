@@ -1,11 +1,18 @@
-import {StyleSheet, Text, View} from "react-native";
+import {StyleSheet, FlatList, Text, View} from "react-native";
 import React from "react";
 
-const TestCurrentMedications = () => {
+import TestListItem from "./TestListItem";
+
+const TestCurrentMedications = ({drugs}) => {
+  function renderMedicinItem(itemData) {
+    return <TestListItem {...itemData.item} />;
+  }
   return (
-    <View>
-      <Text>TestCurrentMedications</Text>
-    </View>
+    <FlatList
+      data={drugs}
+      keyExtractor={(item) => item.id}
+      renderItem={renderMedicinItem}
+    />
   );
 };
 
