@@ -10,32 +10,38 @@ const TestListItem = ({drugName, styrka, recept, dosimG, dosIµG, obs}) => {
   // volume = (amount * w)/strength
 
   const strength = styrka.charAt(styrka.length - 5);
-  const numStyrka = parseFloat(styrka);
+  const numStrength = parseFloat(styrka);
 
+  const w = 3;
   return (
     <>
       <View style={{flexDirection: "row"}}>
         <View>
-          <Text>{drugName}</Text>
+          <Text>namn: {drugName}</Text>
         </View>
         <View style={{paddingLeft: 7}}>
-          <Text>{styrka}</Text>
+          <Text>styrka: {styrka}</Text>
         </View>
       </View>
+
       <View>
-        <Text>{strength}g</Text>
+        <Text>m/µ? : {strength}</Text>
       </View>
       <View>
-        <Text>{`${parseFloat(styrka)} ${strength}g/ml`}</Text>
+        <Text>dosiMg : {dosimG * w}</Text>
       </View>
       <View>
-        {strength === "m" && dosimG != 0 ? (
-          <Text>{dosimG / numStyrka}ml</Text>
-        ) : strength === "m" && dosIµG != 0 ? (
-          <Text>{dosIµG / numStyrka} ml</Text>
-        ) : (
-          <Text>{dosIµG / numStyrka} ml</Text>
-        )}
+        <Text>dosIµg : {dosIµG * w}</Text>
+      </View>
+
+      <View>
+        {strength === "m" && dosimG !== 0 && dosIµG !== "" ? (
+          <Text> ge {((dosIµG * w) / (numStrength * 1000)).toFixed(2)} ml</Text>
+        ) : strength === "m" && dosimG !== 0 ? (
+          <Text>ge {((dosimG * w) / numStrength).toFixed(2)} ml</Text>
+        ) : strength === "µ" && dosIµG !== "" ? (
+          <Text>ge {((dosIµG * w) / numStrength).toFixed(2)} ml</Text>
+        ) : null}
       </View>
     </>
   );

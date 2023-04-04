@@ -3,7 +3,7 @@ import React from "react";
 
 import {appStyles} from "../constants/myStyles";
 
-import ListAllMediciner from "../components/ListAllMediciner";
+import ListAllMediciner from "../components/Output/ListAllMediciner";
 import LM from "../constants/data";
 
 const DrugsListScreen = () => {

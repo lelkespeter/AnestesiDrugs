@@ -1,6 +1,7 @@
 import {StyleSheet, Text, View} from "react-native";
 import React from "react";
-import AktuellaMedicinerList from "../components/AktuellaMedicinerList";
+
+import AktuellaMedicinerList from "../components/Output/AktuellaMedicinerList";
 import LM from "../constants/data";
 import TestCurrentMedications from "../components/TestCurrentMedications";
 

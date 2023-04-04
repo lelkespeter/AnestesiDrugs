@@ -1,7 +1,7 @@
 import {FlatList, StyleSheet, Text, View} from "react-native";
 import React from "react";
 
-import {appStyles} from "../constants/myStyles";
+import {appStyles} from "../../constants/myStyles";
 
 const ListAllMediciner = ({drugs}) => {
   function renderDrugsItem({item}) {

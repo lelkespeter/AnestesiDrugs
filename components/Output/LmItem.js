@@ -1,7 +1,7 @@
 import {Pressable, StyleSheet, Text, View} from "react-native";
 import React from "react";
 
-import {appStyles} from "../constants/myStyles";
+import {appStyles} from "../../constants/myStyles";
 
 const LmItem = ({id, name, styrka, recept, dosimG, dosIµG, obs}) => {
   const w = 22;
