@@ -15,7 +15,7 @@ const LM = [
     recept: "",
     dosimG: 0.1,
     dosIµG: "",
-    obs: "maximalt 4 mg",
+    obs: "maximalt 2 ml",
   },
   {
     id: "l3",
@@ -24,7 +24,7 @@ const LM = [
     recept: "",
     dosimG: 0.2,
     dosIµG: "",
-    obs: "maximalt 4 mg",
+    obs: "maximalt 1 ml",
   },
   {
     id: "l4",
@@ -33,7 +33,7 @@ const LM = [
     recept: "",
     dosimG: 0.5,
     dosIµG: "",
-    obs: "maximalt 12,5 mg",
+    obs: "maximalt 0,5 ml",
   },
 
   {
@@ -43,7 +43,7 @@ const LM = [
     recept: "",
     dosiMg: "",
     dosIµG: 10,
-    obs: "maximalt 0.5 mg",
+    obs: "maximalt 1 ml",
   },
 ];
 

@@ -3,13 +3,11 @@ import React from "react";
 
 import AktuellaMedicinerList from "../components/Output/AktuellaMedicinerList";
 import LM from "../constants/data";
-import TestCurrentMedications from "../components/TestCurrentMedications";
 
 const CurrentDosesScreen = () => {
   return (
     <View>
-      {/* <AktuellaMedicinerList drugs={LM} /> */}
-      <TestCurrentMedications drugs={LM} />
+      <AktuellaMedicinerList drugs={LM} />
     </View>
   );
 };
