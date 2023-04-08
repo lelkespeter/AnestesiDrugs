@@ -3,11 +3,19 @@ import React from "react";
 
 import {appStyles} from "../../constants/myStyles";
 
-const LmItem = ({drugName, styrka, recept, dosimG, dosIµG, obs}) => {
+const LmItem = ({
+  drugName,
+  styrka,
+  recept,
+  dosimG,
+  dosIµG,
+  obs,
+  enteredVikt,
+}) => {
   const strength = styrka.charAt(styrka.length - 5);
   const numStrength = parseFloat(styrka);
 
-  const w = 33;
+  const w = +enteredVikt;
   return (
     <>
       <View style={styles.listContainer}>

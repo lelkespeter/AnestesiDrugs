@@ -4,10 +4,11 @@ import React from "react";
 import AktuellaMedicinerList from "../components/Output/AktuellaMedicinerList";
 import LM from "../constants/data";
 
-const CurrentDosesScreen = () => {
+const CurrentDosesScreen = ({route}) => {
+  const {enteredVikt} = route.params;
   return (
     <View>
-      <AktuellaMedicinerList drugs={LM} />
+      <AktuellaMedicinerList drugs={LM} enteredVikt={enteredVikt} />
     </View>
   );
 };
