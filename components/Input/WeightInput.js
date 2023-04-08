@@ -15,7 +15,7 @@ const WeightInput = ({navigation}) => {
       <TextInput
         keyboardType="decimal-pad"
         placeholder="Weight i kg"
-        value={+enteredVikt}
+        value={enteredVikt}
         onChangeText={weightCangeHandler}
       />
 
